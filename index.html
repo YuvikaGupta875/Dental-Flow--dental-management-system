@@ -1,0 +1,175 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DentCare Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#" class="nav-link active" data-page="dashboard">Dashboard</a></li>
+            <li><a href="#" class="nav-link" data-page="patients">Patients</a></li>
+            <li><a href="#" class="nav-link" data-page="appointments">Appointments</a></li>
+            <li><a href="#" class="nav-link" data-page="treatments">Treatments</a></li>
+            <li><a href="#" class="nav-link" data-page="billing">Billing</a></li>
+        </ul>
+    </nav>
+
+    <!-- Dashboard Page -->
+    <div id="dashboard" class="page active fade-in">
+        <div class="container">
+            <h1>Dashboard</h1>
+            <div class="grid">
+                <div class="card">
+                    <h3>Today's Appointments</h3>
+                    <p>Total: 8</p>
+                    <button onclick="showPage('appointments')">View All</button>
+                </div>
+                <div class="card">
+                    <h3>Active Patients</h3>
+                    <p>Total: 145</p>
+                    <button onclick="showPage('patients')">Manage Patients</button>
+                </div>
+                <div class="card">
+                    <h3>Revenue (This Month)</h3>
+                    <p>$12,450</p>
+                    <button onclick="showPage('billing')">View Reports</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Patients Page -->
+    <div id="patients" class="page">
+        <div class="container">
+            <h1>Patient Management</h1>
+            <div class="card">
+                <h2>Add New Patient</h2>
+                <form onsubmit="event.preventDefault(); alert('Patient added successfully!');">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Date of Birth</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Contact Number</label>
+                        <input type="tel" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" required>
+                    </div>
+                    <button type="submit">Add Patient</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Appointments Page -->
+    <div id="appointments" class="page">
+        <div class="container">
+            <h1>Appointments</h1>
+            <div class="card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Patient Name</th>
+                            <th>Date & Time</th>
+                            <th>Treatment</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>2024-11-24 10:00 AM</td>
+                            <td>Dental Cleaning</td>
+                            <td><span class="status confirmed">Confirmed</span></td>
+                            <td><button onclick="alert('Edit functionality coming soon!')">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td>2024-11-24 11:30 AM</td>
+                            <td>Root Canal</td>
+                            <td><span class="status pending">Pending</span></td>
+                            <td><button onclick="alert('Edit functionality coming soon!')">Edit</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Treatments Page -->
+    <div id="treatments" class="page">
+        <div class="container">
+            <h1>Treatments</h1>
+            <div class="grid">
+                <div class="card">
+                    <h3>Dental Cleaning</h3>
+                    <p>Duration: 30 mins</p>
+                    <p>Cost: $100</p>
+                    <button onclick="showPage('appointments')">Schedule</button>
+                </div>
+                <div class="card">
+                    <h3>Root Canal</h3>
+                    <p>Duration: 90 mins</p>
+                    <p>Cost: $800</p>
+                    <button onclick="showPage('appointments')">Schedule</button>
+                </div>
+                <div class="card">
+                    <h3>Tooth Extraction</h3>
+                    <p>Duration: 45 mins</p>
+                    <p>Cost: $200</p>
+                    <button onclick="showPage('appointments')">Schedule</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Billing Page -->
+    <div id="billing" class="page">
+        <div class="container">
+            <h1>Billing & Invoices</h1>
+            <div class="card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Invoice ID</th>
+                            <th>Patient</th>
+                            <th>Treatment</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#INV001</td>
+                            <td>John Doe</td>
+                            <td>Dental Cleaning</td>
+                            <td>$100</td>
+                            <td><span class="status confirmed">Paid</span></td>
+                        </tr>
+                        <tr>
+                            <td>#INV002</td>
+                            <td>Jane Smith</td>
+                            <td>Root Canal</td>
+                            <td>$800</td>
+                            <td><span class="status pending">Pending</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
