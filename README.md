@@ -1,4 +1,5 @@
-DENT CARE - DENTAL MANAGEMENT SYSTEM
+DENT CARE :
+
 DentCare Management System is a comprehensive web-based application designed to streamline the operations of a dental clinic or practice. It offers a user-friendly interface for managing patients, appointments, treatments, billing, and invoices efficiently. The system provides a centralized platform for healthcare professionals to keep track of patient records, schedule appointments, manage treatments, generate invoices, and view reports—all while ensuring a smooth and organized workflow.
 
 Key features include:
